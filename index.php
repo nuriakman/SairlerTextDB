@@ -17,10 +17,13 @@
             $SayfaNo = substr($Sair, 1, 4);
             $SayfaNo = substr($Sair, 1, 4);
             $SayfaNo = intval($SayfaNo);
-            echo "<li><a href='sair.php?sair=$SairAdi&id=$SayfaNo'>$SairAdi</a> </li>";
+            echo "<li>";
+            echo "<a href='yonetim.sair.duzenle.php?id=$SayfaNo'>Düzenle</a>&nbsp;&nbsp;";
+            echo "<a href='sair.php?sair=$SairAdi&id=$SayfaNo'>$SairAdi</a>";
+            echo "</li>";
           }
-
         ?>
       </ul>
+      <a href='yonetim.sair.ekle.php'>Yeni şair ekle...</a>
   </body>
 </html>
