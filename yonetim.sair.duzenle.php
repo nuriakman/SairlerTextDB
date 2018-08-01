@@ -1,5 +1,12 @@
 <?php
 
+  @session_start();
+  if($_SESSION["GirisYapti"] <> 1) {
+    header("Location: giris.yap.php");
+    die();
+  }
+
+
   if(isset($_POST["Editor"])) {
     // Form gönderilmiş. Biz de kaydedelim...
     $DosyaIcerigi = $_POST["Editor"];
